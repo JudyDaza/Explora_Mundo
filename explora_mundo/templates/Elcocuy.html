@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sierra del Cocuy - ExploraMundo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        :root {
+            --boyaca-red: #8B0000;  /* Rojo oscuro */
+            --boyaca-green:var(--boyaca-dark);  /* Verde oscuro */
+            --boyaca-white: #FFFFFF;
+            --boyaca-dark:#125936;
+        }
+        
+        header {
+            background-color: var(--boyaca-dark);
+            color: var(--boyaca-white);
+            padding: 1rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 1rem 0;
+        }
+        
+        nav ul li {
+            margin: 0 15px;
+        }
+        
+        nav ul li a {
+            color: var(--boyaca-white);
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: #D4AF37;
+        }
+        
+        main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+        
+        h1, h2, h3 {
+            color: var(--boyaca-green);
+            margin-bottom: 1rem;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin: 2rem 0;
+        }
+        
+        h2 {
+            font-size: 2rem;
+            border-bottom: 2px solid var(--boyaca-red);
+            padding-bottom: 0.5rem;
+            margin-top: 2rem;
+        }
+        
+        .info-section {
+            background-color: var(--boyaca-white);
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .info-section p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+        
+        .attractions {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .attraction {
+            background-color: var(--boyaca-white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .attraction:hover {
+            transform: translateY(-5px);
+        }
+        
+        .attraction img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 3px solid var(--boyaca-red);
+        }
+        
+        .attraction-content {
+            padding: 1rem;
+        }
+        
+        .attraction h3 {
+            color: var(--boyaca-red);
+            margin-bottom: 0.5rem;
+        }
+        
+        footer {
+            background-color: var(--boyaca-dark);
+            color: var(--boyaca-white);
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 2rem;
+        }
+        
+        .back-btn {
+            display: inline-block;
+            background-color: var(--boyaca-red);
+            color: var(--boyaca-white);
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 1rem;
+            transition: background-color 0.3s;
+        }
+        
+        .back-btn:hover {
+            background-color: #600000;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html#inicio">Inicio</a></li>
+                <li><a href="index.html#paquetes">Paquetes</a></li>
+                <li><a href="index.html#cotizador">Cotizador</a></li>
+                <li><a href="index.html#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <h1>Sierra Nevada del Cocuy</h1>
+        
+        <section class="info-section">
+            <h2>Historia</h2>
+            <p>La Sierra Nevada del Cocuy, Güicán y Chita es un macizo montañoso ubicado en la cordillera Oriental de los Andes colombianos. Para los indígenas U'wa, habitantes ancestrales de la región, estas montañas son sagradas y consideradas el corazón del mundo.</p>
+            <p>El parque nacional natural El Cocuy, creado en 1977, protege este ecosistema único que alberga los glaciares más grandes de Colombia, con picos que superan los 5.000 metros de altura. Es un destino privilegiado para el montañismo y el ecoturismo.</p>
+        </section>
+        
+        <section class="info-section">
+            <h2>Atractivos Turísticos</h2>
+            <div class="attractions">
+                <div class="attraction">
+                    <img src="https://www.globalnationalparks.com/es/wp-content/uploads/Principales-Picos-Nevados-Cocuy-Colombia-1536x1150.jpg" alt="Panorámica Sierra">
+                    <div class="attraction-content">
+                        <h3>Picos Nevados</h3>
+                        <p>Con más de 25 picos nevados, incluyendo el Ritacuba Blanco (5.330 m), el más alto de la cordillera Oriental.</p>
+                    </div>
+                </div>
+                <div class="attraction">
+                    <img src="https://situr.boyaca.gov.co/wp-content/uploads/2017/04/cocuy-1024x576.png" alt="Laguna Grande">
+                    <div class="attraction-content">
+                        <h3>Laguna Grande</h3>
+                        <p>Hermosa laguna glaciar rodeada de montañas nevadas, accesible tras una caminata de alta montaña.</p>
+                    </div>
+                </div>
+                <div class="attraction">
+                    <img src="https://lacgeo.com/sites/default/files/cocuy_pico_aguja_opt.jpg" alt="Páramo">
+                    <div class="attraction-content">
+                        <h3>Páramos y Frailejones</h3>
+                        <p>Ecosistemas de páramo con frailejones centenarios que adornan el paisaje montañoso.</p>
+                    </div>
+                </div>
+                <div class="attraction">
+                    <img src="https://www.globalnationalparks.com/es/wp-content/uploads/flora-parque-nacional-natural-el-cocuy.jpg" alt="Caminatas">
+                    <div class="attraction-content">
+                        <h3>Rutas de Senderismo y Escalada</h3>
+                        <p>Red de senderos para trekking de diferentes dificultades, con vistas espectaculares.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <a href="index.html#paquetes" class="back-btn">Volver a Paquetes</a>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 ExploraMundo. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

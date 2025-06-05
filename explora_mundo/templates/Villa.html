@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Villa de Leyva - ExploraMundo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        :root {
+            --boyaca-red: #8B0000;  /* Rojo oscuro */
+            --boyaca-green:var(--boyaca-dark);  /* Verde oscuro */
+            --boyaca-white: #FFFFFF;
+            --boyaca-dark:#125936;
+        }
+        
+        header {
+            background-color: var(--boyaca-dark);
+            color: var(--boyaca-white);
+            padding: 1rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 1rem 0;
+        }
+        
+        nav ul li {
+            margin: 0 15px;
+        }
+        
+        nav ul li a {
+            color: var(--boyaca-white);
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: #D4AF37; /* Oro */
+        }
+        
+        main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+        
+        h1, h2, h3 {
+            color: var(--boyaca-green);
+            margin-bottom: 1rem;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin: 2rem 0;
+        }
+        
+        h2 {
+            font-size: 2rem;
+            border-bottom: 2px solid var(--boyaca-red);
+            padding-bottom: 0.5rem;
+            margin-top: 2rem;
+        }
+        
+        .info-section {
+            background-color: var(--boyaca-white);
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .info-section p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+        
+        .attractions {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .attraction {
+            background-color: var(--boyaca-white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .attraction:hover {
+            transform: translateY(-5px);
+        }
+        
+        .attraction img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 3px solid var(--boyaca-red);
+        }
+        
+        .attraction-content {
+            padding: 1rem;
+        }
+        
+        .attraction h3 {
+            color: var(--boyaca-red);
+            margin-bottom: 0.5rem;
+        }
+        
+        footer {
+            background-color: var(--boyaca-dark);
+            color: var(--boyaca-white);
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 2rem;
+        }
+        
+        .back-btn {
+            display: inline-block;
+            background-color: var(--boyaca-red);
+            color: var(--boyaca-white);
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 1rem;
+            transition: background-color 0.3s;
+        }
+        
+        .back-btn:hover {
+            background-color: #600000; /* Rojo más oscuro */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html#inicio">Inicio</a></li>
+                <li><a href="index.html#paquetes">Paquetes</a></li>
+                <li><a href="index.html#cotizador">Cotizador</a></li>
+                <li><a href="index.html#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <h1>Villa de Leyva</h1>
+        
+        <section class="info-section">
+            <h2>Historia</h2>
+            <p>Villa de Leyva, fundada en 1572, es uno de los pueblos coloniales mejor conservados de Colombia. Su arquitectura colonial española, calles empedradas y la enorme plaza principal (una de las más grandes de América) la convierten en un destino turístico por excelencia.</p>
+            <p>El pueblo fue declarado Monumento Nacional en 1954, lo que ha permitido preservar su encanto colonial. Durante la época precolombina, la región estaba habitada por los Muiscas, y aún se pueden encontrar vestigios de esta cultura en los alrededores.</p>
+        </section>
+        
+        <section class="info-section">
+            <h2>Atractivos Turísticos</h2>
+            <div class="attractions">
+                <div class="attraction">
+                    <img src="https://cloudfront-us-east-1.images.arcpublishing.com/elespectador/2AI7X4FFT5BWXPBKRINQ3Y7VSA.jpg" alt="Plaza Principal">
+                    <div class="attraction-content">
+                        <h3>Plaza Principal</h3>
+                        <p>Con 14,000 m², es una de las plazas más grandes de Colombia, rodeada de edificios coloniales y la iglesia parroquial.</p>
+                    </div>
+                </div>
+                <div class="attraction">
+                    <img src="https://sp-ao.shortpixel.ai/client/to_webp%2Cq_glossy%2Cret_img%2Cw_791%2Ch_593/https%3A//alkilautos.com/blog/wp-content/uploads/2017/08/17.08.03-Que-hacer-en-Villa-de-Leyva-Casa-Terracota.jpg" alt="Casa Terracota">
+                    <div class="attraction-content">
+                        <h3>Casa Terracota</h3>
+                        <p>Considerada la cerámica más grande del mundo, es una casa-habitación construida totalmente en arcilla.</p>
+                    </div>
+                </div>
+                <div class="attraction">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhxnq-BmnuhsV6FB33xqQxLA0U2e_O8LSBug&s" alt="Pozos Azules">
+                    <div class="attraction-content">
+                        <h3>Pozos Azules</h3>
+                        <p> Son reservorios de agua y su particularidad es el fondo azul el cual se resalta con la luz del sol en contraste con el paisaje. Poseen características de aguas marinas, 
+                            concentraciones de sal, azufre y óxido de cobre, la acidez y color típicos de agua marina se debe a la concentración de estos elementos en el suelo, por ende el color azul del agua.</p>
+                    </div>
+                </div>
+                <div class="attraction">
+                    <img src="https://situr.boyaca.gov.co/wp-content/uploads/2017/05/Museopehistorico2.jpg" alt="Museo prehistórico">
+                    <div class="attraction-content">
+                        <h3>Museo prehistórico</h3>
+                        <p>El museo de historia natural es otra de las grandes creaciones del Maestro Luis Alberto Acuña, 
+                            en el que el autor representa la formación de la vida desde la creación de nuestro planeta,
+                             presentando fósiles auténticos de la región, así como réplicas a escala de grandes dinosaurios esculpidos en ferro concreto recreando el ambiente prehistórico; de igual manera presenta piezas del mar, arqueología, escultura y cerámica..</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <a href="index.html#paquetes" class="back-btn">Volver a Paquetes</a>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 ExploraMundo. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

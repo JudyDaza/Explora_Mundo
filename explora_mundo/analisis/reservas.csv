@@ -1,0 +1,11 @@
+reserva_id,destino,cliente,personas,dias,costo_total
+1,Villa de Leyva,Ana Torres,2,3,1080000
+2,Lago de Tota,Pedro Gómez,4,2,1200000
+3,Sierra del Cocuy,Luis Pérez,2,4,2000000
+4,Tunja,Laura Ruiz,3,2,720000
+5,Villa de Leyva,Diego Ríos,2,5,1800000
+6,Paipa,Camila Ortiz,4,3,1680000
+7,Ráquira,Juan Pérez,2,1,260000
+8,Sierra del Cocuy,Maria Gomez,3,3,2250000
+9,Lago de Tota,Carlos Sánchez,5,2,1500000
+10,Villa de Leyva,Luisa Ramírez,2,2,720000

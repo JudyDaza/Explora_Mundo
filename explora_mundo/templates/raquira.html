@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ráquira - ExploraMundo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        :root {
+            --boyaca-red: #8B0000;  /* Rojo oscuro */
+            --boyaca-green:var(--boyaca-dark);  /* Verde oscuro */
+            --boyaca-white: #FFFFFF;
+            --boyaca-dark:#125936;
+        }
+        
+        header {
+            background-color: var(--boyaca-dark);
+            color: var(--boyaca-white);
+            padding: 1rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 1rem 0;
+        }
+        
+        nav ul li {
+            margin: 0 15px;
+        }
+        
+        nav ul li a {
+            color: var(--boyaca-white);
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: #D4AF37; /* Oro */
+        }
+        
+        main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+        
+        h1, h2, h3 {
+            color: var(--boyaca-green);
+            margin-bottom: 1rem;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin: 2rem 0;
+        }
+        
+        h2 {
+            font-size: 2rem;
+            border-bottom: 2px solid var(--boyaca-red);
+            padding-bottom: 0.5rem;
+            margin-top: 2rem;
+        }
+        
+        .info-section {
+            background-color: var(--boyaca-white);
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .info-section p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+        
+        .attractions {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .attraction {
+            background-color: var(--boyaca-white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .attraction:hover {
+            transform: translateY(-5px);
+        }
+        
+        .attraction img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 3px solid var(--boyaca-red);
+        }
+        
+        .attraction-content {
+            padding: 1rem;
+        }
+        
+        .attraction h3 {
+            color: var(--boyaca-red);
+            margin-bottom: 0.5rem;
+        }
+        
+        footer {
+            background-color: var(--boyaca-dark);
+            color: var(--boyaca-white);
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 2rem;
+        }
+        
+        .back-btn {
+            display: inline-block;
+            background-color: var(--boyaca-red);
+            color: var(--boyaca-white);
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 1rem;
+            transition: background-color 0.3s;
+        }
+        
+        .back-btn:hover {
+            background-color: #600000; /* Rojo más oscuro */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html#inicio">Inicio</a></li>
+                <li><a href="index.html#paquetes">Paquetes</a></li>
+                <li><a href="index.html#cotizador">Cotizador</a></li>
+                <li><a href="index.html#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <h1>Ráquira</h1>
+        
+        <section class="info-section">
+            <h2>Historia</h2>
+            <p>El nombre "Ráquira" proviene del idioma muisca y significa "ciudad de las ollas", reflejando la ancestral tradición alfarera de la región. Antes de la llegada de los españoles, 
+                el área estaba habitada por las tribus táquiras, ráquiras y mocabitas, pertenecientes a la Confederación Muisca. 
+                Estas comunidades eran expertas en la elaboración de cerámica y en la agricultura, cultivando productos como papa y maíz.</p>
+        </section>
+        
+        <section class="info-section">
+            <h2>Atractivos Turísticos</h2>
+            <div class="attractions">
+                <div class="attraction">
+                    <img src="https://lh3.googleusercontent.com/p/AF1QipMfATVvyZgnHxongTFaHtQIdDucBZeyaM8GPujA=w270-h312-n-k-no" alt="Mano del Artesano">
+                    <div class="attraction-content">
+                        <h3>Mano del Artesano</h3>
+                        <p>Esta escultura monumental en forma de mano sostiene una escalera que simboliza el ascenso del arte y la cultura de Ráquira. Ubicada en un mirador, ofrece vistas panorámicas del valle y es un lugar popular para fotografías.</p>
+                    </div>
+                </div>
+               
+                <div class="attraction">
+                    <img src="https://lh3.googleusercontent.com/p/AF1QipPgZciIJzQqNLgPx5_J1mMzuMuvXQAaioXjkgEU=w810-h468-n-k-no" alt="Casa al reves">
+                    <div class="attraction-content">
+                        <h3>Casa al Revés</h3>
+                        <p> La Casa al Revés es una atracción única que ofrece una experiencia visual y sensorial fascinante. Diseñada con una inclinación de 5 grados,
+                             tanto su estructura como su mobiliario están invertidos, creando la ilusión de estar caminando por el techo.</p>
+                    </div>
+                </div>
+                <div class="attraction">
+                    <img src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4noWgMyp2_YVQtnBP8KubTG9nFD9Zs8nJ1cwowYWjLtXzj9ElZMH8ct8pEQFN7xdeOOehjjCb45gcemC6W0SxEvuCBD8ON19YUBCxFIdptxsWrcLZJzkYd9R-RGjbzXvgXeBYxqVyA=s294-w294-h220-k-no" alt="Finca Beraca">
+                    <div class="attraction-content">
+                        <h3>Finca Beraca</h3>
+                        <p> La Finca Beraca ofrece una experiencia de glamping única en Ráquira, combinando comodidad y naturaleza en un entorno colorido y artístico.
+                            Sus instalaciones incluyen domos geodésicos inspirados en hornos de barro tradicionales, brindando una estancia acogedora y diferente.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <a href="index.html#paquetes" class="back-btn">Volver a Paquetes</a>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 ExploraMundo. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExploraMundo - Turismo en Boyacá</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <h1>ExploraMundo</h1>
+            <p>Descubre los tesoros de Boyacá</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#paquetes">Paquetes</a></li>
+                <li><a href="#cotizador">Cotizador</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="inicio" class="hero">
+            <div class="hero-content">
+                <h2>Vive la magia de Boyacá</h2>
+                <p>Descubre paisajes coloniales, lagunas encantadas y pueblos patrimonio con nuestros paquetes exclusivos.</p>
+                <a href="#paquetes" class="btn">Ver paquetes</a>
+            </div>
+        </section>
+        
+        <section id="paquetes" class="destinos">
+            <h2>Nuestros Destinos en Boyacá</h2>
+            <div class="paquetes-container">
+                <div class="paquete">
+                    <img src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrMAXHaAX_efq5tLnXQCjDb29-nJTDr11cm2b0mcidmwSwc_x_QXys3_vws5u714sVY8se0Grnjkl-4dmZuwdOxgYZIPMP5LtoclPAPooZkZ0RYGJCbovaKUJvbKaOG9bxlAY-y=w810-h468-n-k-no" alt="Villa de Leyva">
+                    <h3>Villa de Leyva</h3>
+                    <p class="description">Explora la plaza más grande de Colombia y sus fascinantes museos.</p>
+                    <button onclick="verMas(this)" data-destino="Villa.html">Ver más</button>
+                </div>
+                
+                <div class="paquete">
+                    <img src="https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcQ-j8ZxmsXxAgLvbQUZ-QQ3_lB6TNhvI79B3CApBf14patQW__msSMjkLyJ-gff8TO-3UYP1hcrhmK-7R8o6WY3WNmGACGQ19V19F80Gw" alt="Lago de Tota">
+                    <h3>Lago de Tota</h3>
+                    <p class="description">Disfruta del lago más grande de Colombia y sus playas de arena blanca.</p>
+                    <button onclick="verMas(this)">Ver más</button>
+                </div>
+                
+                <div class="paquete">
+                    <img src="https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcTSL4XZDoBRBsPiEGsnooycNjGnG2z9WC8Ahd-h87_bbYA0TuKu6N81GgQYSJk1F-81ZbZUqJJH4jaiZPS2nc3cbA8pR7CD34aWDkmxWg" alt="Tibasosa">
+                    <h3>Tibasosa</h3>
+                    <p class="description">El municipio de Tibasosa muy conocido por sus lindos jardines.</p>
+                    <button onclick="verMas(this)" data-destino="tibasosa.html">Ver más</button>
+                </div>
+                
+                <div class="paquete">
+                    <img src="https://situr.boyaca.gov.co/wp-content/uploads/2017/04/cocuy-1024x576.png" alt="Sierra Nevada del Cocuy">
+                    <h3>Sierra del Cocuy</h3>
+                    <p class="description">Aventúrate en el parque natural con los glaciares más hermosos.</p>
+                    <button onclick="verMas(this)" data-destino="Elcocuy.html">Ver más</button>
+                </div>
+                <div class="paquete">
+                   <img src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4no_iEan54_u_-Iy5iF_HOqaj11Tl2tKc7bOJ_sJOwFgHWwvNKdt1CaTAnlzNI3vU1WRzH9KxtiSK9eLzz5v_NYjBB3AAJp0qc1ZHG7oDadOB3FutGftH0k0zKMwOjEbSt9DYaEImQ=w810-h468-n-k-no" alt="Ráquira">
+                    <h3>Ráquira</h3>
+                    <p class="description">Ráquira, que en lengua muisca significa ciudad de las ollas.</p>
+                    <button onclick="verMas(this)" data-destino="raquira.html">Ver más</button>
+                </div>
+            </div>
+        </section>
+        
+        <section id="cotizador" class="cotizador">
+            <h2>Cotiza tu viaje</h2>
+            <div class="cotizador-container">
+                <form id="cotizadorForm">
+                    <div class="form-group">
+                        <label for="destino">Destino:</label>
+                        <select id="destino" required>
+                            <option value="">Selecciona un destino</option>
+                            <option value="villa_de_leyva">Villa de Leyva</option>
+                            <option value="lago_de_tota">Lago de Tota</option>
+                            <option value="tibasosa">Tunja</option>
+                            <option value="sierra_del_cocuy">Sierra del Cocuy</option>
+                            <option value="raquira">Ráquira</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="personas">Número de personas:</label>
+                        <input type="number" id="personas" min="1" value="1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="dias">Días de estadía:</label>
+                        <input type="number" id="dias" min="1" value="1" required>
+                    </div>
+                    <button type="submit" class="btn">Calcular costo</button>
+                </form>
+                <div id="resultadoCotizacion" class="resultado"></div>
+            </div>
+        </section>
+        
+        <section id="contacto" class="contacto">
+            <h2>Contáctanos</h2>
+            <form id="contactForm">
+                <input type="text" placeholder="Nombre" required>
+                <input type="email" placeholder="Email" required>
+                <textarea placeholder="Tu mensaje" required></textarea>
+                <button type="submit" class="btn">Enviar</button>
+            </form>
+            <div class="contacto-info">
+                <p><i class="fas fa-phone"></i> +57 321 123 4567</p>
+                <p><i class="fas fa-envelope"></i> contacto@exploramundo.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> Tunja, Boyacá, Colombia</p>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>ExploraMundo</h3>
+                <p>Especialistas en turismo por Boyacá</p>
+            </div>
+            <div class="footer-section">
+                <h3>Redes Sociales</h3>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 ExploraMundo. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
